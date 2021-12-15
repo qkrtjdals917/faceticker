@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>FaceTicker Upload2</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div>
+        <h1>FaceTicker</h1>
+        <div id="content">
+
+            <h3>인식된 얼굴 이미지</h3>
+            <img src="\static\check_face.jpg" alt="수정된이미지" height="600">
+            
+            
+            <form action="/download/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>필터링 안할 얼굴을 선택해 주십시오 (복수 선택 가능)</p>
+                {% for num in number%}
+                    <label><input type="checkbox" name="check[]" value="{{ num}}" id="check">{{ num}}</label>
+                {% endfor %}
+                <p></p>
+                <input type="submit" value="submit" id="btn">
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

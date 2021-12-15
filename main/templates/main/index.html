@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>FaceTicker Upload1</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="contain">
+        <h1>FaceTicker</h1>
+        <div id="content">
+            <h3>심슨 얼굴을 넣고 싶은 사진을 선택하세요</h3>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- <input type="text" name="filename"> -->
+                <input type="file" name="faceimg">
+                <input type="submit" value="upload" id="btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
