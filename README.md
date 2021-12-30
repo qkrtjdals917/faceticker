@@ -17,3 +17,5 @@ Google Colab, OpenCV, pandas, pytorch, pillow, matpolib, django
 
 ## 버전 관리 : Git-Hub
 https://github.com/qkrtjdals917/faceticker
+
+발표 자료 영상 링크 : https://www.youtube.com/watch?app=desktop&v=DLG_nFob1hQ&list=PLedGoSru7948UwKLNYbO5jVo42G0W35DS&index=3
